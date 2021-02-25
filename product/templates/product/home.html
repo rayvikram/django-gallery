@@ -1,0 +1,14 @@
+{% extends 'product/base.html' %}
+
+{% block content %}
+  <div class="row">
+    {% for product in data %}
+      <div class="card col-lg-3 mb-3">
+        <img class="card-img-top" src="{{product.image.url}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">${{product.price}}</h5>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -13,5 +13,10 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    pass
+    date_hierarchy = 'updated_at'
+    list_display = ['name', 'category', 'price']
+    list_filter = ['category']
+    search_fields = ['name']
 
+admin.site.site_header = "Gallery Admin"
+admin.site.site_title = "Gallery Admin"

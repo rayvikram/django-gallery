@@ -1,0 +1,14 @@
+{% extends 'product/base.html' %}
+
+{% block content %}
+<h1>Here is List of All category</h2>
+  <div class="row">
+    {% for each_category in object_list %}
+      <div class="card col-lg-3 mb-3">
+        <div class="card-body">
+          <h5 class="card-title">${{each_category.name}}</h5>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
